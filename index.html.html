@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vishwakarandak 2026 | VIT Pune</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0b0f19;--violet:#8b5cf6;--gold:#f59e0b;--text:#e7e9f2;--muted:rgba(231,233,242,.68);--line:rgba(255,255,255,.1);--glass:rgba(255,255,255,.05);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;background:var(--navy);scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--navy);color:var(--text);font-family:'DM Sans',system-ui,sans-serif;line-height:1.55;overflow-x:hidden}
+h1,h2,h3{font-family:'Bricolage Grotesque',system-ui,sans-serif;margin:0;line-height:1.05}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+section{padding:90px 22px}
+.wrap{max-width:1080px;margin:0 auto}
+h2{font-size:clamp(2rem,5vw,3.2rem);font-weight:800}
+.lead{color:var(--muted);max-width:560px;margin:14px 0 0}
+.glass{background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.glow{position:relative}
+.glow::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(135deg,var(--violet),var(--gold));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .3s;pointer-events:none}
+.glow:hover::before{opacity:1}
+
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:110px}
+.orb{position:absolute;border-radius:50%;filter:blur(110px);pointer-events:none}
+.o1{width:380px;height:380px;background:rgba(139,92,246,.32);left:-120px;top:40px}
+.o2{width:380px;height:380px;background:rgba(245,158,11,.2);right:-100px;bottom:30px}
+.hero .wrap{position:relative}
+.kicker{color:var(--muted);font-size:.95rem;margin:0 0 14px}
+h1{font-size:clamp(2.4rem,10.5vw,7.6rem);font-weight:800;letter-spacing:-.02em}
+h1 .l{display:inline-block;background:linear-gradient(#fff,#c4b5fd);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:0;transform:translateY(50px);animation:up .7s cubic-bezier(.2,.9,.3,1.2) forwards}
+h1 .yr{display:block;font-size:.55em;color:var(--gold);margin-top:6px;opacity:0;animation:fade .6s .9s forwards}
+@keyframes up{to{opacity:1;transform:none}}
+@keyframes fade{to{opacity:1}}
+.tag{font-size:1.2rem;color:rgba(255,255,255,.82);max-width:640px;margin:28px 0 0}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 0;padding:0;list-style:none}
+.badges li{padding:8px 16px;border-radius:99px;font-size:.9rem}
+.badges b{color:var(--gold);margin-right:6px}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.btn{display:inline-block;padding:13px 28px;border-radius:99px;font-weight:600;border:0;cursor:pointer;font-size:1rem;font-family:inherit}
+.btn.p{background:var(--violet);color:#fff;box-shadow:0 0 30px rgba(139,92,246,.5)}
+.btn.s{border:1px solid rgba(245,158,11,.6);color:var(--gold)}
+.btn:hover{filter:brightness(1.12)}
+
+/* about */
+.two{display:grid;gap:44px;grid-template-columns:1fr}
+@media(min-width:900px){.two{grid-template-columns:1fr 1fr}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;list-style:none;margin:26px 0 0}
+.chips li{border:1px solid rgba(255,255,255,.16);border-radius:99px;padding:4px 13px;font-size:.88rem}
+.hl{display:grid;gap:14px}
+.hl article{border-radius:18px;padding:20px}
+.hl h3{font-size:1.25rem;color:var(--gold)}
+.hl p{margin:6px 0 0;color:var(--muted)}
+
+/* past editions */
+.tabs{display:inline-flex;flex-wrap:wrap;gap:4px;padding:4px;border-radius:99px;margin:26px 0 22px}
+.tabs button{background:none;border:0;color:var(--muted);padding:9px 22px;border-radius:99px;cursor:pointer;font:inherit;font-weight:600}
+.tabs button[aria-selected=true]{background:var(--violet);color:#fff}
+.champ{border-radius:22px;padding:26px}
+.champ h3{font-size:clamp(1.6rem,4.5vw,2.6rem);color:var(--gold);margin-top:6px}
+.podium{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;align-items:end;margin-top:18px;height:210px}
+.pod{border-radius:16px 16px 0 0;padding:12px 8px;text-align:center;display:flex;flex-direction:column;justify-content:flex-start;height:0;transition:height .9s cubic-bezier(.2,.9,.3,1);background:linear-gradient(to top,rgba(139,92,246,.15),rgba(139,92,246,.45));border:1px solid var(--line);border-bottom:0;overflow:hidden}
+.pod.g{background:linear-gradient(to top,rgba(245,158,11,.2),rgba(245,158,11,.55))}
+.pod b{font:800 1.8rem 'Bricolage Grotesque',sans-serif}
+.pod span{font-size:.85rem;color:rgba(255,255,255,.85)}
+.stats{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:700px){.stats{grid-template-columns:repeat(4,1fr)}}
+.stats li{border-radius:16px;padding:16px;background:var(--glass);border:1px solid var(--line)}
+.stats b{display:block;font:800 1.9rem 'Bricolage Grotesque',sans-serif;color:var(--gold)}
+.stats span{font-size:.85rem;color:var(--muted)}
+.sub{font-size:1.3rem;margin:32px 0 12px}
+.pw{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.pw li{display:flex;justify-content:space-between;gap:12px;padding:12px 16px;border-radius:14px;background:var(--glass);border:1px solid var(--line)}
+.pw li span:last-child{color:var(--gold);font-weight:600;text-align:right}
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:700px){.gal{grid-template-columns:repeat(4,1fr)}}
+.tile{height:130px;border-radius:16px;border:2px solid transparent;cursor:pointer;color:#fff;font:600 .95rem 'DM Sans',sans-serif;text-align:left;padding:12px;display:flex;align-items:flex-end;transition:transform .25s,border-color .25s}
+.tile:hover{transform:translateY(-4px)}
+.tile[aria-pressed=true]{border-color:var(--gold)}
+.cap{margin:12px 0 0;border-radius:14px;padding:14px 16px;color:rgba(255,255,255,.85)}
+/* pillars */
+.cards{display:grid;gap:22px;margin-top:44px;grid-template-columns:1fr}
+@media(min-width:800px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{height:410px;border-radius:26px;overflow:hidden;position:relative;border:1px solid var(--line)}
+.card .bg{position:absolute;inset:0;transition:transform .7s}
+.card:hover .bg{transform:scale(1.1)}
+.c1 .bg{background:radial-gradient(circle at 30% 25%,#c026d3,transparent 45%),radial-gradient(circle at 75% 60%,#8b5cf6,transparent 50%),#1b1030}
+.c2 .bg{background:radial-gradient(circle at 70% 25%,#f59e0b,transparent 45%),radial-gradient(circle at 25% 65%,#16a34a,transparent 50%),#0f1d17}
+.c3 .bg{background:radial-gradient(circle at 25% 30%,#38bdf8,transparent 45%),radial-gradient(circle at 70% 65%,#8b5cf6,transparent 50%),#0c1626}
+.card::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--navy),transparent 60%)}
+.card .g{position:absolute;left:12px;right:12px;bottom:12px;padding:18px;border-radius:18px;z-index:1}
+.card h3{font-size:1.25rem}
+.card p{margin:8px 0 0;font-size:.9rem;color:rgba(255,255,255,.78)}
+
+/* social */
+.soc{border-radius:28px;padding:clamp(24px,5vw,50px);max-width:900px;margin:0 auto}
+.links{display:grid;gap:14px;margin-top:28px;grid-template-columns:1fr}
+@media(min-width:700px){.links{grid-template-columns:repeat(3,1fr)}}
+.links a{display:block;padding:20px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.03);transition:transform .25s}
+.links a:hover{transform:translateY(-4px)}
+.links b{display:block;margin-bottom:4px}
+.links span{color:var(--muted);font-size:.9rem;word-break:break-all}
+.pulse{display:inline-block;margin-top:28px;padding:13px 26px;border-radius:99px;background:var(--gold);color:var(--navy);font-weight:700;animation:pg 2.2s ease-out infinite}
+@keyframes pg{0%,100%{box-shadow:0 0 0 0 rgba(245,158,11,.55)}50%{box-shadow:0 0 0 14px rgba(245,158,11,0)}}
+
+/* cheer */
+form{display:grid;gap:14px;margin-top:26px}
+label span{display:block;font-size:.88rem;color:var(--muted);margin-bottom:4px}
+input,select,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:#fff;font:inherit}
+select option{background:var(--navy)}
+.wall{border-radius:24px;padding:22px}
+.wall ul{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px;max-height:360px;overflow-y:auto}
+.wall li{background:rgba(255,255,255,.05);border-radius:12px;padding:12px}
+.wall li small{color:var(--gold)}
+.wall p{margin:4px 0 0;color:rgba(255,255,255,.82);overflow-wrap:anywhere}
+.ok{color:#34d399;min-height:1.4em;margin:0}
+footer{text-align:center;color:rgba(255,255,255,.4);font-size:.85rem;padding:20px 22px 110px}
+
+/* sticky banner */
+.live{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:50;white-space:nowrap;padding:12px 20px;border-radius:99px;background:var(--gold);color:var(--navy);font-weight:700;font-size:.9rem;animation:pg 2.2s ease-out infinite}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}h1 .l,h1 .yr{animation:none;opacity:1;transform:none}.pulse,.live{animation:none}.bar i{transition:none}}
+</style>
+</head>
+<body>
+<main>
+<section class="hero">
+  <div class="orb o1"></div><div class="orb o2"></div>
+  <div class="wrap">
+    <p class="kicker">Vishwakarma Institute of Technology, Pune</p>
+    <h1 aria-label="Vishwakarandak 2026"><span id="title" aria-hidden="true"></span><span class="yr" aria-hidden="true">2026</span></h1>
+    <p class="tag">Where Engineering Meets Passion | The Ultimate Inter-Departmental Clash</p>
+    <ul class="badges">
+      <li class="glass"><b>★</b>12+ Departments Competing</li>
+      <li class="glass"><b>★</b>Cultural, Sports &amp; Technical Wizardry</li>
+      <li class="glass"><b>★</b>Inter-Departmental General Championship</li>
+    </ul>
+    <div class="cta">
+      <a class="btn p" href="#past">See Past Champions ↓</a>
+      <a class="btn s" href="https://www.instagram.com/studentcouncilvit/" target="_blank" rel="noopener noreferrer">Follow Live Updates</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap two">
+    <div>
+      <h2>One fest. Every department. One champion.</h2>
+      <p class="lead">Vishwakarandak is the annual flagship inter-departmental fest of VIT Pune. Departments battle across three pillars: Cultural, Sports and Tech. Every event adds points to the department’s tally, and the house with the most at the end takes the trophy.</p>
+      <p class="lead">It runs on house unity and departmental pride: classmates become teammates, seniors coach juniors, and a whole department turns up to cheer one performance.</p>
+      <ul class="chips"><li>CS</li><li>IT</li><li>ENTC</li><li>Mechanical</li><li>AI&amp;DS</li><li>Civil</li><li>Instrumentation</li><li>and more</li></ul>
+    </div>
+    <div class="hl">
+      <article class="glass glow"><h3>V-Rock</h3><p>The music battle where each department brings its loudest band to the stage.</p></article>
+      <article class="glass glow"><h3>Team Eklavya</h3><p>The street play circuit, where departments take a message straight to the crowd.</p></article>
+      <article class="glass glow"><h3>The Trophy</h3><p>One trophy goes to the overall champion department, and it is the one everyone plays for.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="past">
+  <div class="wrap" style="max-width:960px">
+    <h2>Past champions</h2>
+    <p class="lead">Pick a year to see who took the trophy and how the fest went.</p>
+    <div class="tabs glass" role="tablist" aria-label="Edition year" id="yrs"></div>
+    <div id="ed" aria-live="polite">
+      <div class="champ glass glow">
+        <p class="kicker" style="margin:0">Overall champion</p>
+        <h3 id="champ">–</h3>
+        <p id="champsub" class="lead" style="margin:6px 0 0"></p>
+      </div>
+      <div class="podium" id="podium"></div>
+      <ul class="stats" id="stats"></ul>
+      <h3 class="sub">Pillar winners</h3>
+      <ul class="pw" id="pw"></ul>
+      <h3 class="sub">Highlights</h3>
+      <div class="gal" id="gal"></div>
+      <p class="cap glass" id="cap">Tap a tile to read more.</p>
+    </div>
+    <p class="note">Sample data. Replace with the real results before you present this.</p>
+  </div>
+</section>
+
+<section id="pillars">
+  <div class="wrap">
+    <h2>Three pillars, one trophy</h2>
+    <div class="cards">
+      <article class="card glow c1"><div class="bg"></div><div class="g glass"><h3>Cultural Enchantment</h3><p>V-Rock music night, drama, dance showcases and fashion shows.</p></div></article>
+      <article class="card glow c2"><div class="bg"></div><div class="g glass"><h3>Sports Duels</h3><p>High-intensity inter-department matches in Football, Cricket, Basketball, Chess and Badminton.</p></div></article>
+      <article class="card glow c3"><div class="bg"></div><div class="g glass"><h3>Technical Wizardry</h3><p>Hackathons, robo-wars, coding marathons and innovation expos.</p></div></article>
+    </div>
+    <p class="note">Preview uses gradient stand-ins. The real site loads the Unsplash photos.</p>
+  </div>
+</section>
+
+<section id="live">
+  <div class="soc glass">
+    <h2>Follow the fest live</h2>
+    <p class="lead">Scores, reels and results land on the official handles first.</p>
+    <div class="links">
+      <a href="https://www.instagram.com/studentcouncilvit/" target="_blank" rel="noopener noreferrer"><b>Instagram</b><span>@studentcouncilvit</span></a>
+      <a href="https://www.youtube.com/@VITstudentactivities" target="_blank" rel="noopener noreferrer"><b>YouTube</b><span>@VITstudentactivities</span></a>
+      <a href="https://studentcouncilvitpune.in/" target="_blank" rel="noopener noreferrer"><b>Official website</b><span>studentcouncilvitpune.in</span></a>
+    </div>
+    <a class="pulse" href="https://www.instagram.com/studentcouncilvit/" target="_blank" rel="noopener noreferrer">Catch Live Reel Drops &amp; Daily Scores on Instagram 📸</a>
+  </div>
+</section>
+
+<section id="cheer">
+  <div class="wrap two">
+    <div>
+      <h2>Cheer your department</h2>
+      <p class="lead">Leave a message for your team. It shows up on the wall.</p>
+      <form id="form">
+        <label><span>Your name</span><input id="n" maxlength="40" required></label>
+        <label><span>Department</span><select id="d"></select></label>
+        <label><span>Message</span><textarea id="m" rows="4" maxlength="240" required></textarea></label>
+        <button class="btn p" type="submit">Send cheer</button>
+        <p class="ok" role="status" id="ok"></p>
+      </form>
+    </div>
+    <div class="wall glass">
+      <h3>Cheer wall</h3>
+      <p id="empty" class="lead" style="margin-top:12px">No cheers yet. Send the first one.</p>
+      <ul id="cheers"></ul>
+    </div>
+  </div>
+</section>
+</main>
+<footer>Vishwakarandak 2026 · Vishwakarma Institute of Technology, Pune</footer>
+<a class="live" href="https://www.instagram.com/studentcouncilvit/" target="_blank" rel="noopener noreferrer">📸 Live reels &amp; daily scores</a>
+
+<script>
+var D=[{s:"CS",n:"Computer Engineering",c:310,p:240,t:420},{s:"AI&DS",n:"Artificial Intelligence & Data Science",c:290,p:260,t:400},{s:"E&TC",n:"Electronics & Telecommunication",c:330,p:220,t:350},{s:"MECH",n:"Mechanical Engineering",c:240,p:340,t:280},{s:"IT",n:"Information Technology",c:260,p:230,t:330}];
+function esc(s){return s.replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+// title
+var ti=document.getElementById("title");
+"VISHWAKARANDAK".split("").forEach(function(ch,i){var s=document.createElement("span");s.className="l";s.textContent=ch;s.style.animationDelay=(i*.05)+"s";ti.appendChild(s)});
+var E={
+"2025":{champ:"Computer Engineering (CS)",sub:"Won Technical and finished in the top three in every pillar.",pod:[["E&TC","2nd"],["CS","1st"],["MECH","3rd"]],podv:[1,2,0.8],
+ st:[["Departments",14],["Events",38],["Participants",2400],["Days",3]],
+ pw:[["Cultural","E&TC"],["Sports","MECH"],["Technical","CS"]],
+ g:[["V-Rock final night","The loudest crowd of the fest.","#c026d3,#8b5cf6"],["Team Eklavya street play","Eight departments, one open ground.","#f59e0b,#ef4444"],["Football final","Decided on penalties.","#16a34a,#0f766e"],["Robo-war arena","Bots, sparks and a full house.","#38bdf8,#6366f1"]]},
+"2024":{champ:"Electronics & Telecommunication (E&TC)",sub:"Led Cultural from day one and held the lead to the end.",pod:[["CS","2nd"],["E&TC","1st"],["MECH","3rd"]],podv:[1,2,0.8],
+ st:[["Departments",12],["Events",34],["Participants",2100],["Days",3]],
+ pw:[["Cultural","E&TC"],["Sports","MECH"],["Technical","AI&DS"]],
+ g:[["Dance showcase","Twelve departments on one stage.","#ec4899,#8b5cf6"],["Cricket final","Last-over finish.","#16a34a,#84cc16"],["24-hour hackathon","Coffee, code and a demo at sunrise.","#38bdf8,#0ea5e9"],["Prize ceremony","The trophy changes hands.","#f59e0b,#b45309"]]}
+};
+var yrs=document.getElementById("yrs"),yr="2025";
+Object.keys(E).sort().reverse().forEach(function(y){var b=document.createElement("button");b.setAttribute("role","tab");b.textContent=y;b.onclick=function(){yr=y;render()};yrs.appendChild(b)});
+function count(el,to){var t0=null;function f(t){if(!t0)t0=t;var p=Math.min((t-t0)/1100,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3))).toLocaleString("en-IN")+(to>=1000?"+":"");if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
+function render(){
+  var e=E[yr];
+  Array.prototype.forEach.call(yrs.children,function(b){b.setAttribute("aria-selected",b.textContent==yr)});
+  document.getElementById("champ").textContent=e.champ;
+  document.getElementById("champsub").textContent=e.sub;
+  var pd=document.getElementById("podium");pd.innerHTML="";
+  e.pod.forEach(function(x,i){var d=document.createElement("div");d.className="pod"+(x[1]=="1st"?" g":"");d.innerHTML="<b>"+esc(x[1])+"</b><span>"+esc(x[0])+"</span>";pd.appendChild(d);
+    requestAnimationFrame(function(){requestAnimationFrame(function(){d.style.height=(e.podv[i]/2*210)+"px"})})});
+  var st=document.getElementById("stats");st.innerHTML="";
+  e.st.forEach(function(x){var li=document.createElement("li");li.innerHTML="<b>0</b><span>"+esc(x[0])+"</span>";st.appendChild(li);count(li.querySelector("b"),x[1])});
+  var pw=document.getElementById("pw");pw.innerHTML="";
+  e.pw.forEach(function(x){var li=document.createElement("li");li.innerHTML="<span>"+esc(x[0])+"</span><span>"+esc(x[1])+"</span>";pw.appendChild(li)});
+  var g=document.getElementById("gal"),cp=document.getElementById("cap");g.innerHTML="";cp.textContent="Tap a tile to read more.";
+  e.g.forEach(function(x){var b=document.createElement("button");b.className="tile";b.setAttribute("aria-pressed","false");b.style.background="linear-gradient(135deg,"+x[2]+")";b.textContent=x[0];
+    b.onclick=function(){Array.prototype.forEach.call(g.children,function(c){c.setAttribute("aria-pressed","false")});b.setAttribute("aria-pressed","true");cp.textContent=x[0]+": "+x[1]};g.appendChild(b)});
+}
+render();
+// cheer form
+var sel=document.getElementById("d");
+D.forEach(function(d){var o=document.createElement("option");o.value=d.s;o.textContent=d.n;sel.appendChild(o)});
+document.getElementById("form").addEventListener("submit",function(e){
+  e.preventDefault();
+  var n=document.getElementById("n"),m=document.getElementById("m"),li=document.createElement("li");
+  li.innerHTML='<small><b style="color:#e7e9f2">'+esc(n.value.trim())+'</b> for '+esc(sel.value)+'</small><p>'+esc(m.value.trim())+'</p>';
+  document.getElementById("cheers").prepend(li);
+  document.getElementById("empty").style.display="none";
+  m.value="";document.getElementById("ok").textContent="Cheer sent.";
+});
+</script>
+</body>
+</html>
